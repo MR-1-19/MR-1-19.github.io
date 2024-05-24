@@ -1,0 +1,94 @@
+<style>
+    .ab{
+        display:flex;
+        justify-content:space-between;
+    }
+    .bb{
+        font-size:25px;
+        color:#fff;
+        background:#673ab7;
+        width:20%;
+        text-align:center;
+    }
+    .cb{
+        font-size:20px;
+        background:#673a;
+    }
+    .gb{
+        font-size:20px;
+        background:#673adf;}
+    .db{
+        font-size:20px;
+        background:#67b7;
+    }
+    .g{
+        display:flex;
+        font-size:20px;
+        color:#fff;
+        background:#673ab7;
+        text-align:center;}
+    .d{
+        text-align:center;
+        font-weight:bold;
+    }
+    .l{
+        text-align:center;
+    }
+    #form{
+            display:none;
+            text-align:center;
+        }
+</style>
+<div id="main">
+    <p class='g'> J-Get </p>
+    <div class='ab'>
+        <div class='bb'> товары </div>
+        <div class='cb'>
+            <div class='d'>
+                <img src='https://avatars.mds.yandex.net/i?id=7029493b937b9066f8bc6181279ab700e5053b82-11449045-images-thumbs&n=13' width='90%' >
+            </div>
+            <p class='d'>Програмирование </p>
+            <p>цена:1000</p>
+            <button id="buy">Купить</button>
+        </div>
+        <div class='db'>
+            <div class='d'>
+                <img src='https://avatars.mds.yandex.net/i?id=44d76fd15f4e8332d3407eb2ccb5ae85e0cdfdce-5699743-images-thumbs&n=13' width="90%">
+            </div>
+            <p class='d'>Рисование</p>
+            <p>цена:1000</p>
+            <button id='buy1'>Купить</button>
+        </div>
+        <div class='gb'>
+            <div class='l'>
+                <img src="https://avatars.mds.yandex.net/i?id=140152030cf71258f069fd686a8bb386b618de40-12151887-images-thumbs&n=13" width="90%">
+            </div>
+            <p class='d'>Робототехника</p>
+            <p>цена:1000</p>
+            <button id='buy2' >Купить</button>
+        </div>
+    </div>
+</div>
+<form id="form">
+    <input type="text" placeholder="Имя" id="user_name">
+    <input type="text" placeholder="Email" id="user_email">
+    <input type="text" placeholder="Телефон" id="user_phone">
+    <div id="error"></div>
+    <button id="order">Оформить</button>
+</form>
+
+<script>
+
+    let buy = document.getElementById("buy");
+    let buy1 = document.getElementById("buy1");
+    let buy2 = document.getElementById("buy2");
+
+    // Добавьте слушатель событий для каждой кнопки
+    [buy, buy1, buy2].forEach((btn) => {
+        btn.addEventListener("click", () => {
+            document.getElementById("main").style.display="none";
+            document.getElementById("form").style.display="block";
+        });
+    });
+
+</script>
